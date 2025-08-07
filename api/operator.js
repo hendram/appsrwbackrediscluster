@@ -70,6 +70,6 @@ catch (err) {
     res.status(401).json({ message: 'Error when try' });
   }
 }
-};
+});
 
 export default router;

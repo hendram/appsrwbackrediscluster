@@ -47,6 +47,6 @@ catch (err) {
     res.status(401).json({ message: 'Invalid token' });
   }
 }
-}
+});
 
 export default router;
