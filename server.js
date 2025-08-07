@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -6,16 +6,16 @@ const PORT = process.env.PORT || 3000;
 // Optional: JSON parsing middleware
 app.use(express.json());
 
-// Import all route files
-const actionRoute = require("./api/action");
-const backupdbRoute = require("./api/backupdb");
-const caridatanamaRoute = require("./api/caridatanama");
-const caridataunitRoute = require("./api/caridataunit");
-const isidataRoute = require("./api/isidata");
-const operatorRoute = require("./api/operator");
-const restoredbRoute = require("./api/restoredb");
-const updatedataRoute = require("./api/updatedata");
-const userRoute = require("./api/user");
+// ESM import style
+import actionRoute from "./api/action.js";
+import backupdbRoute from "./api/backupdb.js";
+import caridatanamaRoute from "./api/caridatanama.js";
+import caridataunitRoute from "./api/caridataunit.js";
+import isidataRoute from "./api/isidata.js";
+import operatorRoute from "./api/operator.js";
+import restoredbRoute from "./api/restoredb.js";
+import updatedataRoute from "./api/updatedata.js";
+import userRoute from "./api/user.js";
 
 // Mount them under /api/<name>
 app.use("/api/action", actionRoute);
