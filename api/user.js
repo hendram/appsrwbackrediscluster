@@ -15,6 +15,7 @@ const admin = [{
 }];
 
 router.post("/", async (req, res) => {
+console.log("fuck");
 
   if (applyCors(req, res)) return;
 
