@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(cors({
-  origin: "*", "https://appsrwrediscluster-production.up.railway.app",
+  origin: "https://appsrwrediscluster-production.up.railway.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
