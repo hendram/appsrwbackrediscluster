@@ -33,7 +33,6 @@ else {
     }
 
     let resultusercheck = await Checkoperatorid(userId);
-        console.log(resultusercheck);
         if(resultusercheck){
 
         if(nama && tempatlahir && tgllahir && noktp && nohp &&
@@ -43,7 +42,6 @@ emergencyhp && pemilikunit) {
 , tgllahir , noktp, nohp ,
 tower , unit , status , periodsewa , agen ,
 emergencyhp , pemilikunit);
-            console.log("dalam isidata");
          if(resultnya === "notfind"){
             let resultnya2 = await Insertpenghunidb(nama ,
  tempatlahir  , tgllahir , noktp, nohp ,
