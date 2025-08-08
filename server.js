@@ -17,7 +17,6 @@ app.options("*", cors());
 
 // Optional: JSON parsing middleware
 app.use(express.json());
-console.log("🚀 Server starting…");
 
 
 
