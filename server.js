@@ -5,6 +5,9 @@ const PORT = process.env.PORT;
 
 // Optional: JSON parsing middleware
 app.use(express.json());
+console.log("🚀 Server starting…");
+
+
 
 // ESM import style
 import actionRoute from "./api/action.js";
