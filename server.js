@@ -1,7 +1,19 @@
 import express from "express";
+import cors from "cors";
+
 const app = express();
 
 const PORT = process.env.PORT;
+
+app.use(cors({
+  origin: "*", "https://appsrwrediscluster-production.up.railway.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
+// Handle OPTIONS preflight globally
+app.options("*", cors());
+
 
 // Optional: JSON parsing middleware
 app.use(express.json());
